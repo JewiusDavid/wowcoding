@@ -1,0 +1,6 @@
+{
+  "name": "LOCK CODE",
+  "description": "LOCK CODE - CODE YOUR WAY OUT. An escape-style timed coding challenge presented by CSE AIML, Jeppiaar Engineering College.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

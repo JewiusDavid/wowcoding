@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-base: #5E3070;
+    --color-bg-dark: #3E1F4D;
+    --color-lilac: #E2A9F0;
+    --color-magenta: #B01FD6;
+    --color-medium-purple: #C46DE0;
+    --color-dark-plum: #4A2260;
+    --color-cream: #E8E2D0;
+  }
+
+  body {
+    background-color: #5E3070;
+    color: #E8E2D0;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography */
+.font-display {
+  font-family: 'Archivo Black', 'Anton', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-script {
+  font-family: 'Dancing Script', 'Caveat', cursive;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Gradient accents */
+.bg-purple-gradient {
+  background: linear-gradient(135deg, #5E3070 0%, #3E1F4D 100%);
+}
+
+.bg-magenta-gradient {
+  background: linear-gradient(135deg, #B01FD6 0%, #C46DE0 50%, #E2A9F0 100%);
+}
+
+.text-magenta-gradient {
+  background: linear-gradient(135deg, #B01FD6 0%, #C46DE0 70%, #E2A9F0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================================
+   GEOMETRIC HEXAGON & OCTAGON SHAPES (NO ROUNDED BORDERS)
+   ========================================================================= */
+
+/* Octagonal cards & containers */
+.shape-octagon {
+  clip-path: polygon(
+    14px 0%, 
+    calc(100% - 14px) 0%, 
+    100% 14px, 
+    100% calc(100% - 14px), 
+    calc(100% - 14px) 100%, 
+    14px 100%, 
+    0% calc(100% - 14px), 
+    0% 14px
+  );
+}
+
+.shape-octagon-border {
+  background: #E2A9F0;
+  padding: 1.5px;
+  clip-path: polygon(
+    14px 0%, 
+    calc(100% - 14px) 0%, 
+    100% 14px, 
+    100% calc(100% - 14px), 
+    calc(100% - 14px) 100%, 
+    14px 100%, 
+    0% calc(100% - 14px), 
+    0% 14px
+  );
+}
+
+.shape-octagon-border-magenta {
+  background: linear-gradient(135deg, #B01FD6, #E2A9F0);
+  padding: 1.5px;
+  clip-path: polygon(
+    14px 0%, 
+    calc(100% - 14px) 0%, 
+    100% 14px, 
+    100% calc(100% - 14px), 
+    calc(100% - 14px) 100%, 
+    14px 100%, 
+    0% calc(100% - 14px), 
+    0% 14px
+  );
+}
+
+/* Small octagonal badge / box */
+.shape-octagon-sm {
+  clip-path: polygon(
+    8px 0%, 
+    calc(100% - 8px) 0%, 
+    100% 8px, 
+    100% calc(100% - 8px), 
+    calc(100% - 8px) 100%, 
+    8px 100%, 
+    0% calc(100% - 8px), 
+    0% 8px
+  );
+}
+
+/* Hexagonal buttons with angled 45-degree ends */
+.shape-hexagon-btn {
+  clip-path: polygon(
+    12px 0%, 
+    calc(100% - 12px) 0%, 
+    100% 50%, 
+    calc(100% - 12px) 100%, 
+    12px 100%, 
+    0% 50%
+  );
+}
+
+/* Regular hexagon badge for logo & icons */
+.shape-hexagon-badge {
+  clip-path: polygon(
+    25% 0%, 
+    75% 0%, 
+    100% 50%, 
+    75% 100%, 
+    25% 100%, 
+    0% 50%
+  );
+}
+
+/* Regular octagon for badges */
+.shape-octagon-badge {
+  clip-path: polygon(
+    29.29% 0%, 
+    70.71% 0%, 
+    100% 29.29%, 
+    100% 70.71%, 
+    70.71% 100%, 
+    29.29% 100%, 
+    0% 70.71%, 
+    0% 29.29%
+  );
+}
+
+/* Spiral holes notebook motif */
+.spiral-holes-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0.75rem 0;
+}
+
+.spiral-hole {
+  width: 14px;
+  height: 14px;
+  background-color: #E2A9F0;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+/* Tabular figures for timers, counters, data */
+.tabular-numbers {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Accessible focus states */
+*:focus-visible {
+  outline: 2px solid #E2A9F0;
+  outline-offset: 3px;
+}
+
+/* Shooting star trailing particle CSS keyframes */
+@keyframes starTailParticle {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 6px #E2A9F0);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0.6) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.15) rotate(90deg);
+    opacity: 0;
+    filter: drop-shadow(0 0 0px transparent);
+  }
+}
+
+.animate-star-tail {
+  animation: starTailParticle 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+

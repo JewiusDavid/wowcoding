@@ -1,0 +1,50 @@
+[
+  {
+    "id": "LC-2026-001",
+    "name": "Aravind Krishnan",
+    "registerNumber": "310822104012",
+    "department": "CSE AIML",
+    "year": "3rd Year",
+    "college": "Jeppiaar Engineering College",
+    "email": "aravind.k@jeppiaar.ac.in",
+    "phone": "9840123456",
+    "registeredAt": "2026-10-06T11:03:16.576Z",
+    "registeredAtIst": "6/10/2026, 4:33:16 pm"
+  },
+  {
+    "id": "LC-2026-002",
+    "name": "Kavitha Ramesh",
+    "registerNumber": "310822104045",
+    "department": "CSE",
+    "year": "3rd Year",
+    "college": "Jeppiaar Engineering College",
+    "email": "kavitha.ramesh@gmail.com",
+    "phone": "9444156789",
+    "registeredAt": "2026-10-06T13:03:16.576Z",
+    "registeredAtIst": "6/10/2026, 6:33:16 pm"
+  },
+  {
+    "id": "LC-2026-003",
+    "name": "Mohammed Faisal",
+    "registerNumber": "310823104028",
+    "department": "Information Technology",
+    "year": "2nd Year",
+    "college": "Jeppiaar Engineering College",
+    "email": "mfaisal.tech@gmail.com",
+    "phone": "9789012345",
+    "registeredAt": "2026-10-06T14:03:16.576Z",
+    "registeredAtIst": "6/10/2026, 7:33:16 pm"
+  },
+  {
+    "id": "LC-2026-004",
+    "name": "Praveen Kumar",
+    "registerNumber": "310822104099",
+    "department": "CSE AIML",
+    "year": "3rd Year",
+    "college": "Jeppiaar Engineering College",
+    "email": "praveen.test@jeppiaar.ac.in",
+    "phone": "9876543210",
+    "registeredAt": "2026-10-06T15:03:25.655Z",
+    "registeredAtIst": "6/10/2026, 8:33:25 pm"
+  }
+]
